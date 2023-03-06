@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: F20F20/F20F20.github.io
+  repo: F20F20.github.io
   branch: master
   site_domain: admirable-conkies-b01305.netlify.app
 
