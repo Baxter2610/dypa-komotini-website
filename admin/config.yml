@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: F20F20.github.io
+  repo: Baxter2610/dypa-komotini-website
   branch: master
   site_domain: admirable-conkies-b01305.netlify.app
 
