@@ -1,12 +1,19 @@
-# config.yml
-
 backend:
-  name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-media_folder: 'assets/uploads'
+  name: github
+  repo: F20F20/F20F20.github.io
+  branch: master
+  site_domain: admirable-conkies-b01305.netlify.app
+
+media_folder: "images/uploads"
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
-    fields:
-      - { name: Title }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
